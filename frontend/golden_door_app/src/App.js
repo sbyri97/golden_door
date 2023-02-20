@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Title from './components/Title';
+import UploadForm from './components/Uploadform';
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -17,6 +18,7 @@ function App() {
         <p>The current time is {currentTime}.</p>
       </header> */}
       <Title/>
+      <UploadForm />
     </div>
   );
 }

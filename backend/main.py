@@ -8,6 +8,11 @@ from firebase_admin import credentials, firestore, initialize_app
 app = Flask(__name__)
 cors = CORS(app)
 
+#Intialize firestore db
+cred = credentials.Certificate('key.json')
+default_app = initialize_app(cred)
+db = firestore.client()
+todo_ref = db.collection('tools')
 
 @app.route('/time')
 def get_current_time():
