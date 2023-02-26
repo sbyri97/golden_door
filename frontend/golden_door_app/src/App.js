@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Title from './components/Title';
 import UploadForm from './components/Uploadform';
+import LoadInsta from './components/Insta';
+import './App.css'
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -17,8 +19,10 @@ function App() {
       {/* <header className="App-header">
         <p>The current time is {currentTime}.</p>
       </header> */}
-      <Title/>
-      <UploadForm />
+      <header className='App-header' style={{textAlign: 'center'}}>
+        <h1>Cuts</h1>
+      </header>
+      <LoadInsta token={process.env.REACT_APP_INS_TOKEN} limit={12}/>
     </div>
   );
 }
